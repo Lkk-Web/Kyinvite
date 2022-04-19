@@ -1,0 +1,113 @@
+@startuml <Kying>
+
+class User<<用户>>{
+   +id:int11<主键>
+   openid:varchat64<用户唯一标识>
+   station:json<期望岗位 依赖Station表 至多3个>
+   address:json<期望地点 --省--市>
+   enclosure:varchat64<简历附件>
+   status:enum<账号状态 -- 正常、停用>
+   //isReport:<举报>
+}
+
+class Company<<公司/hr>>{
+   +id:int11<主键>
+   headerImg:varchat64<头像>
+   account:chat11<账号>
+   password:varchat64<密码>
+   status:enum<账号状态 -- 正常、待审核、停用>
+   name:varchat32<公司名称>
+   enclosure:varchat64<公司证明附件>
+}
+
+class Admin<<管理表>>{
+   +id:int11<主键>
+   #roleId:int11<权限 -- 关联 Role 表>
+   account:chat11<账号>
+   password:varchat64<密码>
+   status:enum<账号状态 -- 正常、停用>
+}
+Admin o-- Role
+
+
+class Role<<角色>>{
+   +id:int11<主键>
+   rolename:varchar8<权限名称>
+   menu:enum<权限菜单>
+}
+
+class Delivery<<我的投递>>{
+   +id:int11<主键>
+   #userid:int11<用户id -- 关联 User 表>
+   #stationid:int11<职位id -- 关联 Station 表>
+}
+Delivery o-- User
+Delivery o-- Station
+
+class Station<<职位>>{
+   +id:int11<主键>  
+   #companyId:int11<公司ID -- 关联 Company 表>
+   #Twocategoryid:varchar8<职位种类 -- 关联 TwoCategory 表>
+   name:varchar24<岗位名称>
+   description:varchar256<岗位描述>
+   welfareDescription:varchar256<福利描述>
+   city:json<工作地点? --省--市>
+   salaryUp:int11<最高工资>
+   salaryDown:int11<最低工资>
+}
+Station o-- Company
+Station o-- TwoCategory
+
+class Category<<职位种类>>{
+   +id:int11<主键>
+   name:varchar4<种类名称>
+   description:varchar255<种类描述> 
+}
+
+class TwoCategory<<二级种类>>{
+   +id:int11<主键>
+   #categoryid:int11<职位种类 -- 关联 Category 表>
+   name:varchar4<种类名称>
+   description:varchar255<种类描述>
+}
+TwoCategory o-- Category
+
+class Training<<附件视频-培训>>{
+   +id:int11<主键>
+   resumeTraining:varchar256<简历培训 -- 视频链接>
+   vocationalTraining:varchar256<职业培训 -- 视频链接>
+}
+
+class Collection<<职位收藏>>{
+   +id:int11<主键>
+   #userId:int11<用户id 关联 User 表>
+   #stationId<职位id -- 关联 Station 表>
+}
+Collection o-- User
+Collection o-- Station
+
+class CompanyCollection<<hr的标记>>{
+   +id:int11<主键>
+   #companyid:int11<公司id -- 关联 Company 表>
+   #userid:int11<用户id -- 关联 User 表>
+}
+CompanyCollection o-- Company
+CompanyCollection o-- User
+
+class Feedback<<意见反馈>>{
+   +id:int11<主键>
+   #userID:int11<用户id 关联 User 表>
+   email:varchat64<邮箱>
+   feedback:varchar2048<意见反馈>
+}
+Feedback o-- User
+
+class Setting<<设置>>{
+   +id:int11<主键>
+   legalAdvice:text<法律咨询>
+   privacyAgreement:text<隐私协议>
+   banner:json<横幅>
+   advertising:varchar1024<广告>
+}
+
+@enduml
