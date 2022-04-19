@@ -22,7 +22,7 @@ class Company<<公司/hr>>{
 
 class Admin<<管理表>>{
    +id:int11<主键>
-   #roleId:int11<权限 -- 关联 Role 表>
+   #roleID:int11<权限 -- 关联 Role 表>
    account:chat11<账号>
    password:varchat64<密码>
    status:enum<账号状态 -- 正常、停用>
@@ -38,15 +38,15 @@ class Role<<角色>>{
 
 class Delivery<<我的投递>>{
    +id:int11<主键>
-   #userid:int11<用户id -- 关联 User 表>
-   #stationid:int11<职位id -- 关联 Station 表>
+   #userID:int11<用户id -- 关联 User 表>
+   #stationID:int11<职位id -- 关联 Station 表>
 }
 Delivery o-- User
 Delivery o-- Station
 
 class Station<<职位>>{
    +id:int11<主键>  
-   #companyId:int11<公司ID -- 关联 Company 表>
+   #companyID:int11<公司ID -- 关联 Company 表>
    #Twocategoryid:varchar8<职位种类 -- 关联 TwoCategory 表>
    name:varchar24<岗位名称>
    description:varchar256<岗位描述>
@@ -66,8 +66,8 @@ class Category<<职位种类>>{
 
 class TwoCategory<<二级种类>>{
    +id:int11<主键>
-   #categoryid:int11<职位种类 -- 关联 Category 表>
-   name:varchar4<种类名称>
+   #categoryID:int11<职位种类 -- 关联 Category 表>
+   name:varchar8<种类名称>
    description:varchar255<种类描述>
 }
 TwoCategory o-- Category
@@ -80,16 +80,16 @@ class Training<<附件视频-培训>>{
 
 class Collection<<职位收藏>>{
    +id:int11<主键>
-   #userId:int11<用户id 关联 User 表>
-   #stationId<职位id -- 关联 Station 表>
+   #userID:int11<用户id 关联 User 表>
+   #stationID<职位id -- 关联 Station 表>
 }
 Collection o-- User
 Collection o-- Station
 
 class CompanyCollection<<hr的标记>>{
    +id:int11<主键>
-   #companyid:int11<公司id -- 关联 Company 表>
-   #userid:int11<用户id -- 关联 User 表>
+   #companyID:int11<公司id -- 关联 Company 表>
+   #userID:int11<用户id -- 关联 User 表>
 }
 CompanyCollection o-- Company
 CompanyCollection o-- User
@@ -107,7 +107,7 @@ class Setting<<设置>>{
    legalAdvice:text<法律咨询>
    privacyAgreement:text<隐私协议>
    banner:json<横幅>
-   advertising:varchar1024<广告>
+   advertising:json<广告>
 }
 
 @enduml
