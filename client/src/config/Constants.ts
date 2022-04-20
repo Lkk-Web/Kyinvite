@@ -1,6 +1,8 @@
 
 export const RSetState = 'RSetState'
 
+export const tabList = ['常用', '职位', '待遇', '地点']
+
 export const TAB_BAR = [
     {
         iconPath: require('../assets/icon/focus1.png'),

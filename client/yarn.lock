@@ -1461,7 +1461,7 @@
     "xml2js" "^0.4.19"
     "xxhashjs" "^0.2.2"
 
-"@tarojs/components@3.4.6":
+"@tarojs/components@>=3", "@tarojs/components@3.4.6":
   "integrity" "sha512-NkR1SQ4JM2NYrglC9bqqyt6wJMD5cDvTKRIkek3zvEUSfSppNjTCpfeeAgWUoV3jIyl1G8+YduZmroAvMNyBSw=="
   "resolved" "https://registry.npmjs.org/@tarojs/components/-/components-3.4.6.tgz"
   "version" "3.4.6"
@@ -1647,7 +1647,7 @@
     "@tarojs/service" "3.4.6"
     "@tarojs/shared" "3.4.6"
 
-"@tarojs/react@3.4.6":
+"@tarojs/react@>=3", "@tarojs/react@3.4.6":
   "integrity" "sha512-91CPh6MGONqaJu6BmMuEQvr3BI5UKi5i+RsISEfAjR/Vt4/Xm9EUh+6ELW8KhfgT4KAPE+WaPD/xYOApWJm/eg=="
   "resolved" "https://registry.npmjs.org/@tarojs/react/-/react-3.4.6.tgz"
   "version" "3.4.6"
@@ -1934,15 +1934,6 @@
   "integrity" "sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w=="
   "resolved" "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz"
   "version" "15.7.5"
-
-"@types/react@^16.7.3":
-  "integrity" "sha512-cXRVHd7vBT5v1is72mmvmsg9stZrbJO04DJqFeh3Yj2tVKO6vmxg5BI+ybI6Ls7ROXRG3aFbZj9x0WA3ZAoDQw=="
-  "resolved" "https://registry.npmjs.org/@types/react/-/react-16.14.25.tgz"
-  "version" "16.14.25"
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    "csstype" "^3.0.2"
 
 "@types/react@^17.0.2":
   "integrity" "sha512-Ye0nlw09GeMp2Suh8qoOv0odfgCoowfM/9MG6WeRD60Gq9wS90bdkdRtYbRkNhXOpG4H+YXGvj4wOWhAC0LJ1g=="
@@ -3299,11 +3290,6 @@
   "integrity" "sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA=="
   "resolved" "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.2.0.tgz"
   "version" "2.2.0"
-
-"bind-decorator@^1.0.11":
-  "integrity" "sha1-5BvAah9l3ZzsR2yRxdrzl4SIJS8="
-  "resolved" "https://registry.npmjs.org/bind-decorator/-/bind-decorator-1.0.11.tgz"
-  "version" "1.0.11"
 
 "bl@^1.0.0":
   "integrity" "sha512-pvcNpa0UU69UT341rO6AYy4FVAIkUHuZXRIWbq+zHnsVcRzDDjIAhGuuYoi0d//cwIwtt4pkpKycWEfjdV+vww=="
@@ -10635,7 +10621,7 @@
   dependencies:
     "asap" "~2.0.3"
 
-"prop-types@^15.6.2", "prop-types@^15.8.1":
+"prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -10831,7 +10817,7 @@
     "minimist" "^1.2.0"
     "strip-json-comments" "~2.0.1"
 
-"react-dom@^17.0.0":
+"react-dom@^17.0.0", "react-dom@>=16.13.0":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -10864,7 +10850,7 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.9.0.tgz"
   "version" "0.9.0"
 
-"react@^16.8.0 || ^17.0.0 || ^18.0.0-rc", "react@^17.0.0", "react@^17.0.1", "react@>=16.8", "react@17.0.2":
+"react@^16.8.0 || ^17.0.0 || ^18.0.0-rc", "react@^17.0.0", "react@^17.0.1", "react@>=16.13.0", "react@>=16.8", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -12740,17 +12726,15 @@
     "css-mediaquery" "^0.1.2"
     "postcss-value-parser" "^3.3.0"
 
-"taro-ui@^2.3.4":
-  "integrity" "sha512-qjAGO75bIvBGaOlpbnRKecTjmQIzJZjieFuz2UsfSJHnyGgOhlFviWWHPLQQGE2tFcjC0Zol0BDnO4r87JjdSw=="
-  "resolved" "https://registry.npmjs.org/taro-ui/-/taro-ui-2.3.4.tgz"
-  "version" "2.3.4"
+"taro-ui@^3.0.0-alpha":
+  "integrity" "sha512-sNgMFKv1WrcUvxVrIP5CwzfSAdx5nCGJhb5+4atzK+nJneuX9lKO4hZhlJ4FchrlF68QjM5s5Rb47VAuXVbKsA=="
+  "resolved" "https://registry.npmjs.org/taro-ui/-/taro-ui-3.0.0-alpha.10.tgz"
+  "version" "3.0.0-alpha.10"
   dependencies:
-    "@types/react" "^16.7.3"
-    "bind-decorator" "^1.0.11"
     "classnames" "^2.2.6"
     "dayjs" "^1.7.7"
     "lodash" "^4.17.10"
-    "prop-types" "^15.6.2"
+    "prop-types" "^15.7.2"
 
 "term-size@^1.2.0":
   "integrity" "sha1-RYuDiH8oj8Vtb/+/rSYuJmOO+mk="
