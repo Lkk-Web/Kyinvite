@@ -2,7 +2,7 @@
   "miniprogramRoot": "./dist",
   "projectname": "client",
   "description": "招聘小程序",
-  "appid": "touristappid",
+  "appid": "wx423d4cbbe814ed74",
   "setting": {
     "urlCheck": true,
     "es6": false,

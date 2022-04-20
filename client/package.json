@@ -43,7 +43,8 @@
 		"@tarojs/runtime": "3.4.6",
 		"@tarojs/taro": "3.4.6",
 		"react": "^17.0.0",
-		"react-dom": "^17.0.0"
+		"react-dom": "^17.0.0",
+		"zustand": "^4.0.0-rc.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.0",

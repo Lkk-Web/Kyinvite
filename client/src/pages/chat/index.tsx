@@ -5,7 +5,7 @@ import Layout from '../../layout'
 
 export default () => {
   return (
-    <Layout menuIndex={0} bgColor="#ffffff">
+    <Layout menuIndex={1} bgColor="#ffffff">
       <View className='index' onClick={() => {
         Taro.login({
           success: function (res) {
