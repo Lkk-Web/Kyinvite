@@ -4,8 +4,9 @@ import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
 import cn.binarywang.wx.miniapp.bean.WxMaPhoneNumberInfo;
 import cn.binarywang.wx.miniapp.bean.WxMaUserInfo;
-import com.github.binarywang.demo.wx.miniapp.config.WxMaConfiguration;
-import com.github.binarywang.demo.wx.miniapp.utils.JsonUtils;
+
+import cn.hutool.json.JSONUtil;
+import com.common.config.WxMaConfiguration;
 import me.chanjar.weixin.common.error.WxErrorException;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -43,7 +44,7 @@ public class WxMaUserController {
 
             //TODO 可以增加自己的逻辑，关联业务相关数据
 
-            return JsonUtils.toJson(session);
+            return JSONUtil.toJsonStr(session);
         } catch (WxErrorException e) {
             this.logger.error(e.getMessage(), e);
             return e.toString();
@@ -68,7 +69,7 @@ public class WxMaUserController {
         // 解密用户信息
         WxMaUserInfo userInfo = wxService.getUserService().getUserInfo(sessionKey, encryptedData, iv);
 
-        return JsonUtils.toJson(userInfo);
+        return JSONUtil.toJsonStr(userInfo);
     }
 
     /**
@@ -89,7 +90,7 @@ public class WxMaUserController {
         // 解密
         WxMaPhoneNumberInfo phoneNoInfo = wxService.getUserService().getPhoneNoInfo(sessionKey, encryptedData, iv);
 
-        return JsonUtils.toJson(phoneNoInfo);
+        return JSONUtil.toJsonStr(phoneNoInfo);
     }
 
 }
