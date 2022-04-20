@@ -97,7 +97,12 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.78</version>
         </dependency>
-
+        <!-- hutoll工具包 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.0.M3</version>
+        </dependency>
         <!-- javax.validation/validation-api -->
         <dependency>
             <groupId>javax.validation</groupId>
@@ -105,6 +110,16 @@
             <version>2.0.1.Final</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-miniapp</artifactId>
+            <version>4.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
 
