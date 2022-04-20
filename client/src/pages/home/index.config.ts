@@ -1,3 +1,4 @@
 export default definePageConfig({
-  navigationBarTitleText: '求职'
+  navigationBarTitleText: '可依'
 })
+  

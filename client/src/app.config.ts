@@ -1,14 +1,14 @@
 export default {
   pages: [
     'pages/home/index',
-    'pages/coach/index',
     'pages/chat/index',
+    'pages/coach/index',
     'pages/user/index',
     'pages/index/index',
   ],
   window: {
     backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#fff',
+    navigationBarBackgroundColor: '#bed2bb',
     navigationBarTitleText: '可依',
     navigationBarTextStyle: 'black'
   },
