@@ -1,10 +1,10 @@
 export default {
   pages: [
-    'pages/coach/index',
-    'pages/index/index',
     'pages/home/index',
+    'pages/coach/index',
     'pages/chat/index',
     'pages/user/index',
+    'pages/index/index',
   ],
   window: {
     backgroundTextStyle: 'light',
