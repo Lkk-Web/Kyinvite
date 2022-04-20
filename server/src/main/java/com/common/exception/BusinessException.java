@@ -1,8 +1,8 @@
-package common.exception;
+package com.common.exception;
 
 
-import common.exception.code.BaseResponseCode;
-import common.exception.code.ResponseCodeInterface;
+import com.common.exception.code.BaseResponseCode;
+import com.common.exception.code.ResponseCodeInterface;
 
 /**
  * BusinessException

@@ -1,6 +1,6 @@
-package common.mapper;
+package com.common.mapper;
 
-import common.entity.Test2Entity;
+import com.common.entity.Test2Entity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

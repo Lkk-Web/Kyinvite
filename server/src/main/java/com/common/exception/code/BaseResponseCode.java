@@ -1,4 +1,4 @@
-package common.exception.code;
+package com.common.exception.code;
 
 
 /**
