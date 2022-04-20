@@ -1,9 +1,10 @@
 export default {
   pages: [
     'pages/home/index',
+    'pages/search/index',
     'pages/chat/index',
-    'pages/coach/index',
     'pages/user/index',
+    'pages/coach/index',
     'pages/index/index',
   ],
   window: {
