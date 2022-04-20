@@ -12,14 +12,14 @@ import java.util.List;
 @ConfigurationProperties(prefix = "wx.miniapp")
 public class WxMaProperties {
 
-    private List<Config> configs;
+    public List<Config> configs;
 
     @Data
     public static class Config {
         /**
          * 设置微信小程序的appid
          */
-        private String appid;
+        public String appid;
 
         /**
          * 设置微信小程序的Secret
