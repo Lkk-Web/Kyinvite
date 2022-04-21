@@ -10,7 +10,7 @@ export default () => {
   return (
     <View className='index' >
       <View className="searchBox">
-        <Input className="search" type='text' placeholder='搜索职位、企业' />
+        <Input className="search" type='text' placeholder='搜索职位、企业' focus />
         <Image className="searchIcon" src={icon.search}></Image>
       </View>
       <AtTabs current={currentIndex} animated tabList={tabList.map((title) => ({ title }))} onClick={(e) => {

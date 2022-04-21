@@ -32,7 +32,7 @@ export default () => {
         </Swiper>
         <Text>Hello world!</Text>
         <View className="searchBox">
-          <Input className="search" type='text' placeholder='搜索职位、企业' onClick={() => {
+          <Input className="search" disabled type='text' placeholder='搜索职位、企业' onClick={() => {
             Taro.navigateTo({ url: '/pages/search/index' })
           }} />
           <Image className="searchIcon" src={icon.search}></Image>
