@@ -4,7 +4,9 @@ import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
 import cn.binarywang.wx.miniapp.bean.WxMaPhoneNumberInfo;
 import cn.binarywang.wx.miniapp.bean.WxMaUserInfo;
+import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
+import com.client.service.UserService;
 import com.common.config.WxMaConfiguration;
 import com.common.config.WxMaProperties;
 import io.swagger.annotations.Api;
@@ -19,6 +21,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+
 /**
  * 微信小程序用户接口
  *
@@ -31,6 +35,7 @@ public class WxMaUserController {
   private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
   private WxMaProperties properties;
+  @Resource UserService userService;
 
   @Value("${mywx.appid}")
   public String appid;
@@ -51,6 +56,7 @@ public class WxMaUserController {
       String openid = session.getOpenid();
 
       // TODO 可以增加自己的逻辑，关联业务相关数据
+      if (StrUtil.isEmpty(openid)) {}
 
       return JSONUtil.toJsonStr(session);
     } catch (WxErrorException e) {
