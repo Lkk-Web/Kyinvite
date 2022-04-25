@@ -3,20 +3,12 @@
 class User<<用户>>{
    +id:int11<主键>
    openid:varchat64<用户唯一标识>
-   name:varchat24<用户昵称>
-   headerImg:varchat64<头像>
    station:json<期望岗位 依赖Station表 至多3个>
    address:json<期望地点 --省--市>
    enclosure:varchat64<简历附件>
-   studentEnclosure:varchat64<学生证明附件>
    status:enum<账号状态 -- 正常、停用>
    //isReport:<举报>
 }
-
-' class school<<学校表>>{
-'    +id:int11<主键>
-'    name:varchat24<用户昵称>
-' }
 
 class Company<<公司/hr>>{
    +id:int11<主键>
@@ -25,11 +17,10 @@ class Company<<公司/hr>>{
    password:varchat64<密码>
    status:enum<账号状态 -- 正常、待审核、停用>
    name:varchat32<公司名称>
-   address:json<公司地址 --省--市>
    enclosure:varchat64<公司证明附件>
 }
 
-class Admin<<管理员表>>{
+class Admin<<管理表>>{
    +id:int11<主键>
    #roleID:int11<权限 -- 关联 Role 表>
    account:chat11<账号>
@@ -57,15 +48,12 @@ class Station<<职位>>{
    +id:int11<主键>  
    #companyID:int11<公司ID -- 关联 Company 表>
    #Twocategoryid:varchar8<职位种类 -- 关联 TwoCategory 表>
-   workTime:int1<工作天数  ?天/周>
    name:varchar24<岗位名称>
    description:varchar256<岗位描述>
    welfareDescription:varchar256<福利描述>
    city:json<工作地点? --省--市>
    salaryUp:int11<最高工资>
    salaryDown:int11<最低工资>
-   startTime:Date<开始时间>
-   endTime:Date<结束时间>
 }
 Station o-- Company
 Station o-- TwoCategory
