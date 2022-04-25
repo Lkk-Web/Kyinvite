@@ -1,24 +1,12 @@
-import { Component } from 'react'
-import { View, Text } from '@tarojs/components'
-import './index.less'
-import Taro from '@tarojs/taro';
+import { Text, View } from "@tarojs/components";
+import Taro from "@tarojs/taro";
+import Layout from '../../layout'
 
-export default class Index extends Component {
 
-  componentWillMount() { }
-
-  componentDidMount() { }
-
-  componentWillUnmount() { }
-
-  componentDidShow() { }
-
-  componentDidHide() { }
-
-  render() {
-    return (
-      <View className='index' onclick={() => {
-        console.log(213123);
+export default () => {
+  return (
+    <Layout menuIndex={0} bgColor="#ffffff">
+      <View className='index' onClick={() => {
         Taro.login({
           success: function (res) {
             console.log('res: ', res);
@@ -35,10 +23,9 @@ export default class Index extends Component {
             }
           }
         })
-
       }}>
         <Text>Hello world!</Text>
       </View>
-    )
-  }
+    </Layout>
+  )
 }
