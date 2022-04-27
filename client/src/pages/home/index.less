@@ -1,21 +1,137 @@
 .index {
-  .banner {
-    background-color: #81a380;
-  }
-  .searchBox {
-    position: relative;
-    .search {
-      height: calc(41 * 2px);
-      border-radius: calc(15 * 2px);
-      background: rgba(244, 244, 244, 1);
-      padding-left: calc(15 * 2px);
+  .bannerBg {
+    background-color: #bed2bb;
+    height: calc(165 * 2px);
+    .banner {
+      margin: 0 20px;
+      background-color: #81a380;
     }
-    .searchIcon {
-      position: absolute;
-      right: calc(10 * 2px);
-      top: calc(7 * 2px);
-      width: calc(26 * 2px);
-      height: calc(26 * 2px);
+  }
+  .contentBg {
+    margin: calc(16 * 2px);
+    // background-color: red;
+    .indexButton {
+      height: calc(90 * 2px);
+      display: flex;
+      justify-content: space-around;
+      .buttonBox {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .buttonSearch {
+          height: calc(56 * 2px);
+          width: calc(56 * 2px);
+          margin-bottom: 4px;
+        }
+      }
+    }
+    .line {
+      border-top: 0.1px #dfd4d4 solid;
+      margin-bottom: calc(13 * 2px);
+    }
+    .searchBox {
+      position: relative;
+      .search {
+        height: calc(41 * 2px);
+        border-radius: calc(15 * 2px);
+        background: rgba(244, 244, 244, 1);
+        padding-left: calc(15 * 2px);
+      }
+      .searchIcon {
+        position: absolute;
+        right: calc(10 * 2px);
+        top: calc(7 * 2px);
+        width: calc(26 * 2px);
+        height: calc(26 * 2px);
+      }
+    }
+    .title {
+      color: rgba(129, 163, 128, 1);
+      font-size: 36px;
+      margin: 16px 0;
+    }
+    .briefBox {
+      padding: 0 20px;
+      .jobTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+        .jobName {
+          font-size: 36px;
+        }
+        .jobSalary {
+          color: #e26b53;
+          font-size: 32px;
+        }
+      }
+      .jobMessage {
+        display: flex;
+        justify-content: space-between;
+        color: #bcbcbc;
+        font-size: 28px;
+        margin-bottom: 12px;
+        font-weight: 520;
+        .jobAskBox {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .cloumnLine {
+            height: 28px;
+            border-right: 0.1px solid rgba(166, 166, 166, 1);
+            margin: 0 20px;
+          }
+        }
+      }
+      .treatmentBox {
+        display: flex;
+        justify-content: start;
+        .treatment {
+          padding: 6px 10px;
+          margin-bottom: 24px;
+          background: rgba(241, 245, 248, 1);
+          border-radius: 6px;
+          font-size: 22px;
+          color: #bcbcbc;
+        }
+      }
+      .jobDetailBox {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 12px;
+        .companyLogo {
+          width: 82px;
+          height: 82px;
+          background: #bed2bb;
+        }
+        .companyMsgBox {
+          margin-left: 16px;
+          .companyName {
+            font-size: 32px;
+          }
+          .companyMsg {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            color: #bcbcbc;
+            font-size: 24px;
+            white-space: nowrap;
+          }
+        }
+        .chatBtn,
+        .deliverBtn {
+          padding: 6px 8px;
+          background: #bed2bb;
+          font-size: 20px;
+          color: white;
+          white-space: nowrap;
+          margin-left: 20px;
+        }
+        // .chatBtn{
+        //   margin-bottom: 10px;
+        // }
+      }
     }
   }
 }

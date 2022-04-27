@@ -28,7 +28,8 @@ export default (props) => {
       <View
         style={{
           minHeight: `calc(100vh - ${tabBarHeight}px)`,
-          paddingBottom: `${tabBarHeight + 20}px`,
+          // paddingBottom: `${tabBarHeight + 20}px`,//20暂不知道作业
+          paddingBottom: `${tabBarHeight}px`,
           backgroundColor: bgColor,
           overflow: 'auto',
         }}
