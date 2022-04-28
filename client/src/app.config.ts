@@ -1,6 +1,7 @@
 export default {
   pages: [
     'pages/index/index',
+    'pages/login/index',
     'pages/home/index',
     'pages/search/index',
     'pages/chat/index',
