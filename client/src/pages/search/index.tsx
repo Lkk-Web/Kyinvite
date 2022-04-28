@@ -2,6 +2,7 @@ import { Image, Input, View } from "@tarojs/components";
 import { useState } from "react";
 import { AtTabs, AtTabsPane } from "taro-ui";
 import icon from "../../assets/icon";
+import TargetView from "../../component/TargetView";
 import { tabList } from "../../config/Constants";
 import './index.less'
 
@@ -16,18 +17,11 @@ export default () => {
       <AtTabs current={currentIndex} animated tabList={tabList.map((title) => ({ title }))} onClick={(e) => {
         setCurrentIndex(e)
       }}>
-        {tabList.map((name, i) => (
-          <AtTabsPane current={currentIndex} index={i}>
-            {/* <View style="background-color: #FAFBFC;text-align: center;"> */}
-            {/* {targetsByType[i].map((vo, j) => ( */}
-            {/* <TargetView
-                  value={vo}
-                  onChange={(newVo) => {
-                    updateTarget(i, j, newVo)
-                  }}
-                ></TargetView> */}
-            {/* ))} */}
-            {/* </View> */}
+        {tabList.map((v, i) => (
+          <AtTabsPane current={currentIndex} index={i} key={v}>
+            <TargetView
+              value={currentIndex}
+            ></TargetView>
           </AtTabsPane>
         ))}
       </AtTabs>

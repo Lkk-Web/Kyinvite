@@ -3,3 +3,76 @@
   border-right: 0.1px solid rgba(166, 166, 166, 1);
   margin: 0 20px;
 }
+.TargetViewBox {
+  .TargetViewSearch {
+    padding: 28px;
+    font-size: 32px;
+    .searchKeyBox {
+      display: flex;
+      margin-top: 18px;
+      justify-content: start;
+      .searchKey {
+        padding: 12px;
+        background: #f4f4f4;
+      }
+    }
+  }
+  .TargetViewJob {
+    display: flex;
+    .choice {
+      width: calc(94 * 2px);
+      height: calc(100vh - 193px);
+      background-color: #f2f7f3;
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
+      align-items: center;
+      .choiceType {
+        margin-top: 36px;
+      }
+    }
+    .choiceResultBox {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      .choiceResult {
+        width: calc(100vw - 94 * 2px);
+        display: flex;
+        justify-content: space-around;
+        font-size: 24px;
+        align-items: center;
+        height: 50px;
+        .line {
+          width: 180px;
+          height: 1px;
+          border-bottom: 0.1px solid #d2d2d2;
+        }
+      }
+      .choiceResultJob {
+        display: flex;
+        flex-wrap: wrap;
+        .choiceResultJobType {
+          display: flex;
+          align-items: center;
+          margin: 16px 0 0 16px;
+          padding: 12px 28px;
+          background-color: #f2f7f3;
+          .addressIcon {
+            width: 32px;
+            height: 32px;
+            margin-right: 12px;
+          }
+        }
+      }
+      .currentAddress,
+      .hotAddress {
+        margin: 16px 0 0 16px;
+        font-size: 32px;
+        font-weight: 600;
+      }
+      .hotAddress{
+        margin-top: 36px;
+      }
+    }
+  }
+}
