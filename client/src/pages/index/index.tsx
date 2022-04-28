@@ -1,31 +1,21 @@
-import { Text, View } from "@tarojs/components";
-import Taro from "@tarojs/taro";
-import Layout from '../../layout'
-
+import { Image, View } from "@tarojs/components";
+import image from "../../assets/img";
+import './index.less'
 
 export default () => {
   return (
-    <Layout menuIndex={0} bgColor="#ffffff">
-      <View className='index' onClick={() => {
-        Taro.login({
-          success: function (res) {
-            console.log('res: ', res);
-            if (res.code) {
-              //发起网络请求
-              // Taro.request({
-              //   url: 'https://test.com/onLogin',
-              //   data: {
-              //     code: res.code
-              //   }
-              // })
-            } else {
-              console.log('登录失败！' + res.errMsg)
-            }
-          }
-        })
-      }}>
-        <Text>Hello world!</Text>
+    <View className='indexBox'>
+      <View className="title">选择你的角色</View>
+      <View className="roleBox">
+        <View className="applyJob">
+          <Image src={image.applyJob} className='applyJobImg'></Image>
+          <View>求职者</View>
+        </View>
+        <View className="inviteJob">
+          <Image src={image.inviteJob} className='inviteJobImg'></Image>
+          <View>招聘方</View>
+        </View>
       </View>
-    </Layout>
+    </View>
   )
 }

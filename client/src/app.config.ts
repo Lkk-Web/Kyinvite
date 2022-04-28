@@ -1,11 +1,11 @@
 export default {
   pages: [
+    'pages/index/index',
     'pages/home/index',
     'pages/search/index',
     'pages/chat/index',
     'pages/user/index',
     'pages/coach/index',
-    'pages/index/index',
   ],
   window: {
     backgroundTextStyle: 'light',
