@@ -3,7 +3,10 @@ import Taro from "@tarojs/taro";
 import icon from "../../assets/icon";
 import image from "../../assets/img";
 import CloumnLine from "../../component/cloumnLine";
+import { RSetState } from "../../config/Constants";
 import Layout from '../../layout'
+import { NGlobal } from "../../models/Global";
+import { reducer } from "../../utils/dva16";
 import './index.less'
 
 
@@ -11,6 +14,14 @@ export default () => {
   // ----------------------常量----------------------
   // ----------------------生命周期----------------------
   // ----------------------响应函数----------------------
+  const routePage = (e: number) => {
+    Taro.navigateTo({
+      url: `/pages/search/index`,
+      success: function () {
+        reducer(NGlobal.Name, RSetState, { currentIndex: e })
+      }
+    })
+  }
   // ----------------------渲染函数----------------------
   return (
     <Layout menuIndex={0} bgColor="#ffffff">
@@ -36,15 +47,15 @@ export default () => {
         </View>
         <View className="contentBg">
           <View className="indexButton">
-            <View className="buttonBox">
+            <View className="buttonBox" onClick={() => { routePage(1) }}>
               <Image src={image.occupation} className='buttonSearch'></Image>
-              <Text>求职</Text>
+              <Text>职位</Text>
             </View>
-            <View className="buttonBox">
+            <View className="buttonBox" onClick={() => { routePage(2) }}>
               <Image src={image.wallet} className='buttonSearch'></Image>
               <Text>待遇</Text>
             </View>
-            <View className="buttonBox">
+            <View className="buttonBox" onClick={() => { routePage(3) }}>
               <Image src={image.address} className='buttonSearch'> </Image>
               <Text>地点</Text>
             </View>
@@ -52,7 +63,7 @@ export default () => {
           <View className="line"></View>
           <View className="searchBox">
             <Input className="search" disabled type='text' placeholder='搜索职位、企业' onClick={() => {
-              Taro.navigateTo({ url: '/pages/search/index' })
+              routePage(0)
             }} />
             <Image className="searchIcon" src={icon.search}></Image>
           </View>

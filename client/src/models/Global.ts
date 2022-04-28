@@ -6,11 +6,12 @@ export enum NGlobal {
   Name = 'NGlobal',
 }
 
-const TT = <IModel> {
+const TT = <IModel>{
   namespace: NGlobal.Name,
   state: {
     safeAreaHeight: 0,
     tabBarHeight: 0,
+    currentIndex: 0
   },
   reducers: {
     [RSetState](state: any, { payload }: any) {
