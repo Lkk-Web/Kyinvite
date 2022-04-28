@@ -5,6 +5,10 @@ import { AtAvatar } from 'taro-ui'
 import { AtIcon } from 'taro-ui'
 
 export default () => {
+  // ----------------------常量-------------------------
+  // ----------------------生命周期----------------------
+  // ----------------------响应函数----------------------
+  // ----------------------渲染函数----------------------
   return (
     <Layout menuIndex={3} bgColor="#ffffff">
       {/* <View className='index' >

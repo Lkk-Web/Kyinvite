@@ -8,6 +8,10 @@ import { reducer, useStore } from "../../utils/dva16";
 import './index.less'
 
 export default () => {
+  // ----------------------常量-------------------------
+  // ----------------------生命周期----------------------
+  // ----------------------响应函数----------------------
+  // ----------------------渲染函数----------------------
   const { currentIndex } = useStore(NGlobal.Name)
   return (
     <View className='index' >
