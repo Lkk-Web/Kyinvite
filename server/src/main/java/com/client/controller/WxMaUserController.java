@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class WxMaUserController {
   private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-  @Value("${mywx.appid}")
+  @Value("${wxconfig.appid}")
   public String appid;
 
   /** 登陆接口 */

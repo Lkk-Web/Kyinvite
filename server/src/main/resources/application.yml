@@ -1,6 +1,6 @@
 # 服务配置
 server:
-  port: 8081 # 启动端口
+  port: 20 # 启动端口
 
 
 spring:
@@ -26,7 +26,7 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath*:mapper/*.xml
 
-mywx:
+wxconfig:
   appid: wx423d4cbbe814ed74
 
 wx:
