@@ -18,10 +18,10 @@ export default () => {
       </View>
       <View className='loginButton' onClick={() => {
         Taro.login({
-          success: function (res) {
+          success: async function (res) {
             if (res.code) {
               //发起网络请求
-              effect(NLogin.Name, NLogin.login, { code: res.code }, (res) => {
+              // effect(NLogin.Name, NLogin.login, { code: res.code }, (res) => {
                 if (res) {
                   // 可以通过 Taro.getSetting 先查询一下用户是否授权了 "scope.record" 这个 scope
                   Taro.getSetting({
@@ -46,9 +46,10 @@ export default () => {
                     }
                   })
                 }
-              })
-            } else {
-              console.log('登录失败！' + res.errMsg)
+            //   })
+            // } else {
+            //   Taro.showModal({ title: '登录失败！' })
+            //   console.log('登录失败！' + res.errMsg)
             }
           }
         })

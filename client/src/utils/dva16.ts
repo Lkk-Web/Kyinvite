@@ -8,6 +8,7 @@ import Taro from '@tarojs/taro';
 /* 参考dva接口绑定 */
 const config: { printLog?: boolean } = {}
 const store = {};
+const loadingTip: string = 'loading...'
 
 const wrapPromise = (promise: any) => {
   let status: string = 'pending';
@@ -40,7 +41,7 @@ export function initDva(models, { printLog = false, useImmer = true } = {}) {
     bindModel({ namespace, state, reducers, effects });
   }
 }
-export function bindModel({ namespace, state, reducers, effects }:IModel) {
+export function bindModel({ namespace, state, reducers, effects }: IModel) {
   let vo: any = { suspense: {}, reducers, effects };
   const exec = (set, get) => {
     vo.set = set;
@@ -156,8 +157,7 @@ export function requestFile(url: any, file: string | Blob) {
   return request(url, { method: 'POST', body }, 'application/form-data');
 }
 
-function request(url: string, options: { method: any; body: any }, ContentType: string | null | undefined = null, loadingTip?: string
-) {
+function request(url: string, options: { method: any; body: any }, ContentType: string | null | undefined = null) {
   // return new Promise((resolve, reject) => {
   let { method, body } = options;
   // 添加url前缀
@@ -194,7 +194,7 @@ function request(url: string, options: { method: any; body: any }, ContentType: 
       break;
   }
   return new Promise((resolve, reject) => {
-    loadingTip && Taro.showLoading({ title: loadingTip, mask: true })
+    Taro.showLoading({ title: loadingTip, mask: true })
     Taro.request({
       ...option,
       success: (res) => {
@@ -217,7 +217,17 @@ function request(url: string, options: { method: any; body: any }, ContentType: 
         }
       },
       complete: (res) => {
+        console.log('res: ', res);
         loadingTip && Taro.hideLoading()
+        if (res.errMsg.indexOf('fail')) {
+          setTimeout(() => {
+            Taro.showToast({
+              title: '网络异常',
+              icon: 'error',
+              mask: true,
+            })
+          }, 100)
+        }
       },
     })
   })

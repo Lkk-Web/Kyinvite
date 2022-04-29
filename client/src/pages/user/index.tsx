@@ -1,4 +1,4 @@
-import { Swiper, SwiperItem, Text, View, } from "@tarojs/components";
+import { Swiper, SwiperItem, Text, View, } from "@tarojs/components"; 
 import Taro from "@tarojs/taro";
 import Layout from '../../layout'
 import { AtAvatar } from 'taro-ui'
@@ -11,8 +11,9 @@ export default () => {
   // ----------------------渲染函数----------------------
   return (
     <Layout menuIndex={3} bgColor="#ffffff">
+      helloworld!
       {/* <View className='index' >
-
+  
         <View className='components-page'>
           <Text>flex-direction: row 横向布局</Text>
           <View className='flex-wrp' style='flex-direction:row;'>

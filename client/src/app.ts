@@ -10,11 +10,17 @@ import 'taro-ui/dist/style/index.scss'  //全局引入Taro ui 样式
 
 initRequest(Config.SERVER_HOME, (status, data) => {
   console.log('[API Error]', status, data)
+  setTimeout(() => {
+    Taro.showToast({
+      title: data.message,
+      icon: 'error',
+      mask: true,
+    })
+  }, 100)
   // TODO error handler
 })
 
 export default (props) => {
-
   useEffect(() => {
     Taro.getSystemInfo({
       success: (res) => {
