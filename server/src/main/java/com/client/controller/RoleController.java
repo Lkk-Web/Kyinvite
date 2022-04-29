@@ -1,8 +1,13 @@
 package com.client.controller;
 
+import com.client.model.Role;
+import com.client.service.RoleService;
+import com.common.util.DataResult;
 import io.swagger.annotations.Api;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 前端控制器
@@ -10,12 +15,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author MaybeBin
  * @since 2022-04-21
  */
-@Controller
+@RestController
 @RequestMapping("/client/role")
-@Api(value = "role表")
+@Api(value = "权限")
 public class RoleController {
 
-  /*@Autowired
+  @Autowired
   @Qualifier("RService")
   RoleService roleService;
 
@@ -44,5 +49,5 @@ public class RoleController {
   public DataResult deleteOne(@PathVariable("id") String id) {
     roleService.removeById(id);
     return DataResult.success();
-  }*/
+  }
 }

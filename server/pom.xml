@@ -72,11 +72,6 @@
             <version>2.3.31</version>
         </dependency>
         <!-- p6spy 执行SQL分析打印 -->
-        <dependency>
-            <groupId>p6spy</groupId>
-            <artifactId>p6spy</artifactId>
-            <version>3.9.1</version>
-        </dependency>
 
 
         <!--swagger 接口说明文档框架-->
@@ -121,7 +116,6 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
-
 
 
     <build>
