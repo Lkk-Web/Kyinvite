@@ -1,7 +1,7 @@
 1、终端运行
 
 - cd client
-- npm install
+- npm install / npm install --force
 - npm run dev:weapp
 
 程序终止 Ctrl + C

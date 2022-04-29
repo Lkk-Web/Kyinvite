@@ -25,7 +25,7 @@ export default () => {
   // ----------------------渲染函数----------------------
   return (
     <Layout menuIndex={0} bgColor="#ffffff">
-      <View className='index'>
+      <View className='indexBox'>
         <View className="bannerBg">
           <Swiper
             className='banner'

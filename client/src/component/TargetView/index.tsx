@@ -1,9 +1,15 @@
-import { Image, View } from "@tarojs/components"
+import { Image, Picker, View } from "@tarojs/components"
+import { useEffect } from "react";
+import { AtList, AtListItem } from "taro-ui";
 import icon from "../../assets/icon";
+import { RSetState } from "../../config/Constants";
+import { NUser } from "../../models/user";
+import { reducer, useStore } from "../../utils/dva16";
 import '../index.less'
 
 export default ({ value }) => {
-    // ----------------------常量----------------------
+    // ----------------------常量-------------------------
+    const { userInfo: { area } } = useStore(NUser.Name)
     // ----------------------生命周期----------------------
     // ----------------------响应函数----------------------
     // ----------------------渲染函数----------------------
@@ -38,11 +44,17 @@ export default ({ value }) => {
                 </View>
                 <View className="choiceResultBox">
                     <View className="currentAddress">当前定位</View>
-                    <View className="choiceResultJob">
-                        <View className="choiceResultJobType">
-                            <Image src={icon.address} className='addressIcon'></Image>南京
-                        </View>
-                    </View>
+                    <Picker mode='region' value={area} onChange={(res) => {
+                        reducer(NUser.Name, RSetState, { userInfo: { area: res.detail.value } })
+                    }}>
+                        <AtList>
+                            <View className="choiceResultJob" >
+                                <View className="choiceResultJobType" >
+                                    <Image src={icon.address} className='addressIcon'></Image>{area[1]}
+                                </View>
+                            </View>
+                        </AtList>
+                    </Picker>
                     <View className="hotAddress">热门城市</View>
                 </View>
             </View>}

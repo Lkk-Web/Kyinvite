@@ -43,7 +43,6 @@ export default (props) => {
             className="rowStartCenter tab_item"
             style={{ paddingBottom: `${safeAreaHeight ? safeAreaHeight - 20 : 20}px` }}
             onClick={() => {
-              console.log('item.pagePath: ', item.pagePath);
               Taro.switchTab({ url: item.pagePath })
             }}
           >
