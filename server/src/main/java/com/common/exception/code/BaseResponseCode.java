@@ -8,7 +8,7 @@ public enum BaseResponseCode implements ResponseCodeInterface {
     /**
      * 错误码
      */
-    SUCCESS(0, "操作成功"),
+    SUCCESS(200, "操作成功"),
     SYSTEM_BUSY(500001, "系统繁忙，请稍候再试"),
     OPERATION_ERRO(500002, "操作失败"),
 

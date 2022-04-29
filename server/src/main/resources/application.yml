@@ -1,12 +1,11 @@
 # 服务配置
 server:
-  port: 8081 # 启动端口
-
+  port: 20420 # 启动端口
 
 spring:
   # 数据库配置
   datasource:
-    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://120.25.196.200:3306/Kying_debug?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&autoReconnect=true
     username: root
     password: studyhard!
@@ -24,8 +23,9 @@ logging:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/*.xml
 
-mywx:
+wxconfig:
   appid: wx423d4cbbe814ed74
 
 wx:
@@ -34,7 +34,7 @@ wx:
       - appid: wx423d4cbbe814ed74 #微信小程序的appid
         secret: 5188d159c81a857f0873a345f6b1e635 #微信小程序的Secret
         #token: #微信小程序消息服务器配置的token
-       # aesKey: #微信小程序消息服务器配置的EncodingAESKey
+        # aesKey: #微信小程序消息服务器配置的EncodingAESKey
         msgDataFormat: JSON
 
 

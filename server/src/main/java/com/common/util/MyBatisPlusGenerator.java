@@ -22,8 +22,18 @@ public class MyBatisPlusGenerator {
 
         public static void main(String[] args) {
 
-            List<String> tables = new ArrayList<>();
-            tables.add("role");
+    List<String> tables = new ArrayList<>();
+    tables.add("admin");
+    tables.add("Category");
+    tables.add("Collection");
+    tables.add("Company");
+    tables.add("CompanyCollection");
+    tables.add("Delivery");
+    tables.add("feedback");
+    tables.add("Setting");
+    tables.add("Station");
+    tables.add("training");
+    tables.add("TwoCategory");
 
             FastAutoGenerator.create("jdbc:mysql://120.25.196.200:3306/Kying_debug?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&autoReconnect=true",
                             "root",
