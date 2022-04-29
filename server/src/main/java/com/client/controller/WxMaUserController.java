@@ -14,10 +14,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 微信小程序用户接口
@@ -26,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @Api(value = "微信登录", tags = "微信登录")
-@RequestMapping("/auth")
+@RequestMapping("/client/v1")
 public class WxMaUserController {
   private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -34,7 +31,7 @@ public class WxMaUserController {
   public String appid;
 
   /** 登陆接口 */
-  @GetMapping("/login")
+  @PostMapping("/login")
   @ApiOperation("登录")
   public String login(String code) {
     if (StringUtils.isBlank(code)) {

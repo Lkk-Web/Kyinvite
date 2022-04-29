@@ -1,7 +1,6 @@
 # 服务配置
 server:
-  port: 20 # 启动端口
-
+  port: 20420 # 启动端口
 
 spring:
   # 数据库配置
@@ -32,8 +31,8 @@ wxconfig:
 wx:
   miniapp:
     configs:
-      - appid: 123 #微信小程序的appid
-        secret: #微信小程序的Secret
+      - appid: wx423d4cbbe814ed74 #微信小程序的appid
+        secret: 5188d159c81a857f0873a345f6b1e635 #微信小程序的Secret
         #token: #微信小程序消息服务器配置的token
         # aesKey: #微信小程序消息服务器配置的EncodingAESKey
         msgDataFormat: JSON

@@ -22,7 +22,7 @@ import lombok.Setter;
 @Setter
 @TableName("training")
 @ApiModel(value = "Training对象", description = "")
-public class Training implements Serializable {
+public class Training implements Serializable { //序列化
 
     private static final long serialVersionUID = 1L;
 
@@ -30,7 +30,7 @@ public class Training implements Serializable {
     private Integer id;
 
     @ApiModelProperty("简历培训 -- 视频链接")
-    @TableField("ResumeTraining")
+    @TableField("ResumeTraining")   //数据库字段
     private String resumeTraining;
 
     @ApiModelProperty("职业培训 -- 视频链接")
