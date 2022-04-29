@@ -1,5 +1,5 @@
 import { RSetState } from "../config/Constants";
-import { bindModel, requestPost } from "../utils/dva16";
+import { bindModel, requestGet, requestPost } from "../utils/dva16";
 import { IModel } from "../utils/Idva16";
 
 export enum NLogin {
@@ -16,11 +16,11 @@ const TT = <IModel>{
         role: 'user',
     },
     effects: {
-        async [NLogin.login]({ payload, callback }, { reducer, effect, select }) {
-            const openid = await requestPost('test', { ...payload })
-            console.log('openid: ', openid);
+        async [NLogin.login]({ payload, callback }, { reducer }) {
+            // const openid = await requestPost('login', { ...payload })
+            const openid = await requestGet(`login?code=${payload.code}`, {})
             reducer(RSetState, { userInfo: [123] })
-            callback && callback()
+            callback && callback(openid)
         },
         async [NLogin.get]({ }, { }) {
             console.log('测试hhhh');
