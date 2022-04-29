@@ -1,6 +1,8 @@
 import { Image, Text, View } from "@tarojs/components";
 import Taro from "@tarojs/taro";
 import image from "../../assets/img";
+import { NLogin } from "../../models/login";
+import { effect } from "../../utils/dva16";
 import './index.less'
 
 export default () => {
@@ -20,12 +22,7 @@ export default () => {
             console.log('res: ', res);
             if (res.code) {
               //发起网络请求
-              // Taro.request({
-              //   url: 'https://test.com/onLogin',
-              //   data: {
-              //     code: res.code
-              //   }
-              // })
+              effect(NLogin.Name, NLogin.login, { code: res.code })
               Taro.switchTab({
                 url: `/pages/home/index`,
               })
