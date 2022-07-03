@@ -15,7 +15,7 @@
 在编译器终端中进入KyInvite目录,运行命令：
 
 ```shell
-1、cd kyingInvite
+1、cd kyinvite
 2、npm install 
 3、npm run dev:weapp
 ```
