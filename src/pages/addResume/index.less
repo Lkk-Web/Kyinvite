@@ -1,0 +1,94 @@
+.index {
+  .personalInformation {
+    margin: 50px 0 30px 60px;
+    display: flex;
+    .box {
+      position: relative;
+      .headerImg {
+        width: 140px;
+        height: 140px;
+        background: rgba(229, 229, 229, 1);
+        border-radius: 50%;
+      }
+      .icon {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .message {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-left: 44px;
+      .name {
+        font-size: 40px;
+        font-weight: 600;
+      }
+      .editMessage {
+        display: flex;
+        align-items: center;
+        .icon {
+          width: 27px;
+          height: 27px;
+          margin-right: 14px;
+        }
+      }
+    }
+  }
+  .educationBox {
+    margin: 36px 36px 36px 60px;
+    display: flex;
+    align-items: center;
+    .icon {
+      margin-top: 30px;
+      width: 48px;
+      height: 48px;
+    }
+    .title {
+      font-size: 40px;
+      font-weight: 600;
+    }
+    .content {
+      width: 594px;
+      height: auto;
+      font-size: 28px;
+      margin-top: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #808080;
+    }
+  }
+  .line {
+    border-top: 0.1px #dfd4d4 solid;
+    // width: 100vw;
+    margin-bottom: calc(13 * 2px);
+  }
+  .saveButton {
+    margin: 80px auto 0 auto;
+    width: 396px;
+    height: 84px;
+    background: rgba(129, 163, 128, 1);
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .importResume {
+    margin: 70px 0px 100px 480px;
+    color: #81a380;
+    font-size: 32px;
+  }
+}
+
+//iPhone 6\7\8 及以下适配
+@media screen and (max-height: 680px) {
+  .importResume {
+    margin: 30px 0px 0 480px !important;
+    color: #81a380;
+    font-size: 32px;
+  }
+}

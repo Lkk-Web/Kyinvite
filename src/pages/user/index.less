@@ -1,0 +1,118 @@
+.userBox {
+  .background {
+    background-color: #bed2bb;
+    height: calc(165 * 2px);
+    position: relative;
+    .userBox {
+      display: flex;
+      margin: 0 auto;
+      width: calc(100vw - 160px);
+      .box {
+        position: relative;
+        .avatar {
+          border-radius: 50%;
+          overflow: hidden;
+          width: calc(80 * 2px);
+          height: calc(80 * 2px);
+        }
+        .icon {
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .userMsg {
+        display: flex;
+        justify-content: start;
+        margin-left: 30px;
+        .userDetail {
+          display: flex;
+          flex-direction: column;
+          .userName {
+            width: 300px;
+            margin-top: 20px;
+            font-size: 40px;
+            display: flex;
+            .text {
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            .edit {
+              margin: 8px 0 0 20px;
+              width: 40px;
+              height: 40px;
+              .editImg {
+                width: 40px;
+                height: 40px;
+              }
+            }
+          }
+          .createResume {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 130px;
+            margin-top: 20px;
+            padding: 8px 20px;
+            color: white;
+            background-color: #81a380;
+            border-radius: 20px;
+          }
+          .editCompany {
+            width: 230px;
+          }
+        }
+      }
+    }
+    .communicationBox {
+      position: absolute;
+      padding: 0 40px;
+      left: 50%;
+      top: 220px;
+      transform: translate(-50%);
+      width: calc(326 * 2px - 40px);
+      height: calc(110 * 2px);
+      background-color: red;
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      filter: blur(0px);
+      display: flex;
+      justify-content: space-between;
+      .castResume {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .resumeCount {
+          margin-top: 40px;
+          font-size: 48px;
+        }
+        .resumeTitle {
+          margin-top: 30px;
+          font-size: 36px;
+        }
+      }
+      .line {
+        margin-top: 50px;
+        height: 120px;
+        border-left: 1px rgba(166, 166, 166, 1) solid;
+      }
+    }
+  }
+  .settingList {
+    margin-top: 200px;
+  }
+  .quitLogin {
+    margin: 80px auto 80px auto;
+    width: 400px;
+    height: 80px;
+    background-color: #81a380;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

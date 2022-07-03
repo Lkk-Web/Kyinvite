@@ -1,0 +1,79 @@
+.index {
+  padding: 50px 30px;
+  .title {
+    font-weight: 600;
+    font-size: 36px;
+  }
+  .myInfoBox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    .text {
+      margin-right: 12px;
+    }
+    .icon {
+      width: 42px;
+      height: 42px;
+    }
+  }
+  .hintTextBox {
+    margin-bottom: 100px;
+    .hintText {
+      margin-top: 8px;
+      letter-spacing: 2px;
+      color: rgba(128, 128, 128, 1);
+      font-size: 32px;
+    }
+  }
+  .companyList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 20px;
+    .companyBox {
+      padding: 20px 28px 20px 48px;
+      width: 100%;
+      background: rgba(229, 229, 229, 0.5);
+      border-radius: 10px;
+      .companyMsg {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        .companyMassege {
+          .name {
+            font-size: 32px;
+            font-weight: 600;
+          }
+          .companyMsgBriefBox {
+            margin-top: 14px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+          }
+        }
+        .logo {
+          margin-right: 16px;
+          width: 128px;
+          height: 128px;
+          background: rgba(196, 196, 196, 1);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .addCompany {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 598px;
+    height: 92px;
+    color: rgba(129, 163, 128, 1);
+    background: rgba(190, 210, 187, 0.5);
+    border: 1px solid rgba(129, 163, 128, 1);
+  }
+}

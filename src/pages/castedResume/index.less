@@ -1,0 +1,66 @@
+.index {
+  .castedList {
+    .castedBox {
+      display: flex;
+      justify-content: space-between;
+      padding: 36px 20px;
+      border-bottom: 3px solid rgba(229, 229, 229, 0.5);
+      .positionBox {
+        display: flex;
+        margin: 0 18px;
+        .header {
+          width: 140px;
+          height: 140px;
+          border-radius: 10px;
+        }
+        .positionMsg {
+          margin-left: 36px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .name {
+            font-weight: 600;
+            font-size: 36px;
+          }
+          .company {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+          }
+          .salary {
+            margin-top: 2px;
+            font-size: 24px;
+            color: rgba(226, 107, 83, 1);
+          }
+        }
+      }
+      .otherBox {
+        padding: 2px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .time {
+          font-size: 28px;
+          color: #a6a6a6;
+        }
+        .chatBotton {
+          display: flex;
+          align-items: center;
+          // background-color: #bed2bb;
+          background-color: gray;
+          padding: 8px 20px;
+          border-radius: 20px;
+          color: #ffffff;
+          font-size: 22px;
+          .icon {
+            margin-right: 8px;
+            width: calc(12.25px * 3);
+            height: calc(8.34px * 3);
+          }
+        }
+      }
+    }
+  }
+}

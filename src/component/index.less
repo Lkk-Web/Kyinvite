@@ -1,0 +1,526 @@
+.cloumnLine {
+  height: 28px;
+  border-right: 0.1px solid rgba(166, 166, 166, 1);
+  margin: 0 10px;
+}
+.TargetViewBox {
+  .TargetViewSearch {
+    padding: 28px;
+    font-size: 32px;
+    .iconBox {
+      justify-content: space-between;
+      .titleBox {
+        display: flex;
+      }
+    }
+    .checkBox {
+      display: flex;
+      align-items: center;
+      .searchIcon {
+        margin-right: 17px;
+        width: 46px;
+        height: 46px;
+      }
+      .title {
+        font-weight: 600;
+        font-size: 36px;
+      }
+      .icon {
+        margin-right: 24px;
+        width: 32px;
+        height: calc(14.68px * 2);
+      }
+      .deleteIcon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .batchSearch {
+      margin: 34px 0 0 58px;
+      .inputKey {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        .input {
+          padding: 8px 20px 8px 36px;
+          width: auto;
+          height: 80px;
+          margin-left: 30px;
+          background-color: #f4f4f4;
+        }
+      }
+    }
+    .searchButton {
+      margin: 60px auto;
+      width: 390px;
+      height: 80px;
+      background: rgba(129, 163, 128, 1);
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      // padding: 8px 48px 8px 48px;
+    }
+    .searchKeyBox {
+      display: flex;
+      margin-top: 18px;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      .searchKey {
+        margin: 18px;
+        padding: 12px 28px;
+        background: #f4f4f4;
+      }
+    }
+  }
+  .TargetViewJob {
+    display: flex;
+    .choice {
+      width: calc(110 * 2px);
+      height: calc(100vh - 193px);
+      background-color: #f2f7f3;
+      overflow: auto;
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
+      align-items: center;
+      .choiceType {
+        width: 100%;
+        text-align: center;
+        padding: 18px 0px;
+      }
+      .onChoiceType {
+        width: 100%;
+        text-align: center;
+        background-color: #dce7dc;
+        border-radius: 10px;
+        padding: 18px 0px;
+      }
+    }
+    .choiceResultBox {
+      display: flex;
+      height: calc(100vh - 193px);
+      overflow: auto;
+      flex-direction: column;
+      justify-content: start;
+      .choiceResult {
+        width: calc(100vw - 110 * 2px);
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 24px;
+        align-items: center;
+        height: 50px;
+        .text {
+          font-weight: 600;
+        }
+        .line {
+          width: 180px;
+          height: 1px;
+          border-bottom: 0.1px solid #d2d2d2;
+        }
+      }
+      .choiceResultJob {
+        width: calc(100vw - 110 * 2px);
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .choiceResultJobType {
+          display: flex;
+          align-items: center;
+          margin: 16px 0 0 16px;
+          padding: 12px 28px;
+          background-color: #f2f7f3;
+        }
+        .select {
+          background-color: #dce7dc;
+        }
+      }
+      .choiceResultAddress {
+        .addressIcon {
+          width: 32px;
+          height: 32px;
+          margin-right: 12px;
+        }
+        .choiceResultJobType {
+          display: flex;
+          align-items: center;
+          margin: 16px 0 0 16px;
+          padding: 12px 28px;
+          background-color: #f2f7f3;
+        }
+        .select {
+          background-color: #dce7dc;
+        }
+      }
+      .currentAddress,
+      .hotAddress {
+        margin: 16px 0 0 16px;
+        font-size: 32px;
+        font-weight: 600;
+      }
+      .hotAddress {
+        margin-top: 36px;
+      }
+    }
+    .bind {
+      height: calc(100vh);
+    }
+  }
+  .treatmentView {
+    padding: 28px;
+    .titleBox {
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      .salaryTitle {
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .switch {
+        margin-bottom: 20px;
+        font-size: 20px;
+        padding: 8px 10px;
+        color: #ffffff;
+        background: rgba(190, 210, 187, 1);
+        border-radius: 16px;
+      }
+    }
+    .treatmentTitle {
+      font-weight: 600;
+      margin-top: calc(60px * 2);
+    }
+    .treatmentBox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      .treatmentSelect {
+        background-color: #f2f7f3;
+        padding: 20px 36px;
+        margin: 20px 22px 0 0;
+        white-space: nowrap;
+      }
+      .treatmentAdd {
+        background-color: #f2f7f3;
+        width: 200px;
+        height: 80px;
+        margin: 20px 22px 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .icon {
+          margin: 2px 0 0 6px;
+          width: 29px;
+          height: 29px;
+        }
+      }
+      .input {
+        background-color: #d1ded1;
+      }
+      .input:hover {
+        background-color: #f2f7f3;
+      }
+      .beTreatmentSelect {
+        background-color: #d1ded1;
+        padding: 20px 36px;
+        margin: 20px 22px 0 0;
+        white-space: nowrap;
+      }
+    }
+    .search {
+      margin: 60px auto;
+      width: 400px;
+      height: 80px;
+      background: #81a380;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      padding: 8px 48px 8px 48px;
+    }
+  }
+  .fixBotton {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    bottom: 60px;
+    right: 30px;
+    opacity: 0.8;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #81a380;
+  }
+}
+.salarySelect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .numberInput {
+    width: calc(100px * 2);
+    height: calc(40px * 2);
+    background: rgba(242, 247, 243, 1);
+    border-radius: 5px;
+    text-align: center;
+  }
+}
+.companyViewBox {
+  padding-bottom: 100px;
+  .companyHome {
+    .choiceResult {
+      width: calc(100vw * 2px);
+      display: flex;
+      justify-content: space-around;
+      font-size: 36px;
+      align-items: center;
+      margin-top: 60px;
+      .line {
+        width: 180px;
+        height: 1px;
+        border-bottom: 0.1px solid #d2d2d2;
+      }
+    }
+    .experienceText {
+      margin-top: 20px;
+    }
+    .save {
+      margin: 80px auto 80px auto;
+      width: 400px;
+      height: 80px;
+      background-color: #81a380;
+      color: white;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .text {
+      margin-left: 20px;
+    }
+    .bannerEnvironment {
+      margin: 24px auto;
+      width: 640px;
+      height: 360px;
+      background: rgba(196, 196, 196, 1);
+      .demo1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .postionBox {
+    padding-top: 40px;
+  }
+  .positionInvite {
+    .jobTitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      .jobName {
+        font-size: 36px;
+      }
+      .jobSalary {
+        color: #e26b53;
+        font-size: 32px;
+      }
+    }
+    .jobMessage {
+      display: flex;
+      justify-content: space-between;
+      color: #bcbcbc;
+      font-size: 28px;
+      margin-bottom: 12px;
+      font-weight: 520;
+      .jobAskBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .cloumnLine {
+          height: 28px;
+          border-right: 0.1px solid rgba(166, 166, 166, 1);
+          margin: 0 20px;
+        }
+      }
+    }
+    .detail {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 12px;
+      color: #ffffff;
+      background: rgba(190, 210, 187, 1);
+    }
+    .line {
+      border-top: 0.1px #dfd4d4 solid;
+      margin: 30px 0;
+    }
+  }
+}
+.positionView {
+  .briefBox {
+    padding: 0 20px 10px 20px;
+    .jobTitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      .jobName {
+        font-size: 36px;
+      }
+      .jobSalary {
+        color: #e26b53;
+        font-size: 32px;
+        white-space: 2px;
+      }
+    }
+    .jobMessage {
+      display: flex;
+      justify-content: space-between;
+      color: #bcbcbc;
+      font-size: 28px;
+      margin-bottom: 12px;
+      font-weight: 520;
+      .jobAskBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .cloumnLine {
+          height: 28px;
+          border-right: 0.1px solid rgba(166, 166, 166, 1);
+          margin: 0 20px;
+        }
+      }
+    }
+    .treatmentBox {
+      display: flex;
+      justify-content: start;
+      .treatment {
+        padding: 6px 10px;
+        margin-bottom: 24px;
+        margin-right: 24px;
+        background: rgba(241, 245, 248, 1);
+        border-radius: 6px;
+        font-size: 22px;
+        color: #bcbcbc;
+      }
+    }
+    .jobDetailBox {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 12px;
+      .companyLogo {
+        width: 82px;
+        height: 82px;
+      }
+      .companyMsgBox {
+        margin-left: 16px;
+        .companyName {
+          font-size: 32px;
+        }
+        .companyMsg {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          color: #bcbcbc;
+          font-size: 24px;
+          white-space: nowrap;
+        }
+      }
+      .chatBtn,
+      .deliverBtn {
+        z-index: 99;
+        padding: 6px 8px;
+        background: #bed2bb;
+        font-size: 20px;
+        color: white;
+        white-space: nowrap;
+        margin-left: 10px;
+      }
+      // .chatBtn{
+      //   margin-bottom: 10px;
+      // }
+    }
+  }
+}
+.peopleView {
+  .peopleBox {
+    .peopleInfo {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      .box {
+        display: flex;
+        .headerImg {
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          background: rgba(229, 229, 229, 1);
+        }
+        .info {
+          margin-left: 24px;
+          .position {
+            font-size: 36px;
+            font-weight: 600;
+          }
+          .people {
+            font-size: 28px;
+            display: flex;
+            margin-top: 6px;
+            .margin {
+              margin-right: 20px;
+            }
+          }
+          .degree {
+            font-size: 28px;
+            display: flex;
+            margin-top: 6px;
+            .margin {
+              margin: 0 10px;
+            }
+          }
+        }
+      }
+      .checkResume {
+        color: rgba(129, 163, 128, 1);
+        font-weight: 700;
+      }
+    }
+    .button {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0;
+      .make {
+        display: flex;
+        align-items: center;
+        .collect {
+          width: 32px;
+          height: 32px;
+          margin: 0 10px;
+        }
+      }
+      .goto {
+        display: flex;
+        .btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px;
+          background-color: #bed2bb;
+          padding: 10px 20px;
+          margin: 0 10px;
+          color: rgba(255, 255, 255, 1);
+          font-size: 24px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

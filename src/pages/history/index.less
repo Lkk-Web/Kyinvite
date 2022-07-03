@@ -1,0 +1,141 @@
+.index {
+  .castedList {
+    .castedBox {
+      display: flex;
+      justify-content: space-between;
+      padding: 36px 20px;
+      border-bottom: 3px solid rgba(229, 229, 229, 0.5);
+      .positionBox {
+        display: flex;
+        margin:0 18px;
+        .header {
+          width: 140px;
+          height: 140px;
+          border-radius: 10px;
+        }
+        .positionMsg {
+          margin-left: 36px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .name {
+            font-weight: 600;
+            font-size: 36px;
+          }
+          .company {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+          }
+          .salary {
+            margin-top: 2px;
+            font-size: 24px;
+            color: rgba(226, 107, 83, 1);
+          }
+        }
+      }
+      .otherBox {
+        padding: 2px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .time {
+          font-size: 28px;
+          color: #a6a6a6;
+        }
+        .chatBotton {
+          display: flex;
+          align-items: center;
+          background-color: #bed2bb;
+          padding: 8px 20px;
+          border-radius: 20px;
+          color: #ffffff;
+          font-size: 22px;
+          .icon {
+            margin-right: 8px;
+            width: calc(12.25px * 3);
+            height: calc(8.34px * 3);
+          }
+        }
+      }
+    }
+  }
+  .peopleBox {
+    padding: 32px 32px 0px 32px;
+    .peopleInfo {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      .box {
+        display: flex;
+        .headerImg {
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          background: rgba(229, 229, 229, 1);
+        }
+        .info {
+          margin-left: 24px;
+          .position {
+            font-size: 36px;
+            font-weight: 600;
+          }
+          .people {
+            font-size: 28px;
+            display: flex;
+            margin-top: 6px;
+            .margin {
+              margin-right: 20px;
+            }
+          }
+          .degree {
+            font-size: 28px;
+            display: flex;
+            margin-top: 6px;
+            .margin {
+              margin: 0 10px;
+            }
+          }
+        }
+      }
+      .checkResume {
+        color: rgba(129, 163, 128, 1);
+        font-weight: 700;
+      }
+    }
+    .button {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0;
+      .make {
+        display: flex;
+        align-items: center;
+        .collect {
+          width: 32px;
+          height: 32px;
+          margin: 0 10px;
+        }
+      }
+      .goto {
+        display: flex;
+        .btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px;
+          background-color: #bed2bb;
+          padding: 10px 20px;
+          margin: 0 10px;
+          color: rgba(255, 255, 255, 1);
+          font-size: 24px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .line {
+    border-top: 0.1px #dfd4d4 solid;
+  }
+}

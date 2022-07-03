@@ -1,0 +1,162 @@
+.index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .logoBox {
+    height: calc(480 * 2px);
+    width: 100vw;
+    background-color: #bed2bb;
+    text-align: center;
+    position: relative;
+    .backgroundLogo {
+      position: absolute;
+      opacity: 0.7;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+    .logo {
+      position: absolute;
+      transform: translateX(-50%);
+      opacity: 1;
+      margin-top: 150px;
+      z-index: 1;
+      width: calc(100 * 2px);
+      height: calc(100 * 2px);
+    }
+    .font1 {
+      position: absolute;
+      transform: translateX(-50%);
+      bottom: 470px;
+      opacity: 1;
+      width: calc(130.26 * 2px);
+      height: calc(25.96 * 2px);
+    }
+    .font2 {
+      position: absolute;
+      transform: translateX(-80%);
+      bottom: 340px;
+      opacity: 1;
+      width: calc(196.9 * 2px);
+      height: calc(25.96 * 2px);
+    }
+    .font3 {
+      position: absolute;
+      transform: translateX(-20%);
+      bottom: 210px;
+      opacity: 1;
+      width: calc(197.3 * 2px);
+      height: calc(25.96 * 2px);
+    }
+    .bead {
+      position: absolute;
+      bottom: calc(-33.5 * 2px);
+      width: 100vw;
+      height: calc(77 * 2px);
+      background-color: white;
+      border-radius: 2000px;
+    }
+  }
+  .title {
+    z-index: 1;
+    color: rgba(136, 168, 135, 1);
+    font-weight: 600;
+  }
+  .loginButton {
+    margin-top: 150px;
+    width: calc(240 * 2px);
+    height: calc(40 * 2px);
+    background-color: #bed2bb;
+    color: white;
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+  }
+  .loginButton:hover {
+    background-color: #81a380;
+  }
+  .inviteBox {
+    .count,
+    .password {
+      width: 500px;
+      height: 94px;
+      background-color: #ecf2eb;
+      margin-top: 24px;
+      padding: 0 30px;
+      box-shadow: 1px 1px 1px rgba(129, 163, 128, 0.5);
+      border-radius: 20px;
+    }
+    .login {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 90px;
+      margin-top: 40px;
+      border-radius: 40px;
+      background-color: #81a380;
+      box-shadow: 1px 1px 2px rgba(129, 163, 128, 0.5);
+      color: #ffffff;
+      // filter: grayscale(100%);
+    }
+    .forget {
+      color: rgba(136, 168, 135, 1);
+      font-size: 28px;
+      margin-top: 20px;
+      text-align: end;
+    }
+    .register {
+      margin-top: 60px;
+      color: #a6a6a6;
+      text-align: center;
+      .registerCount {
+        color: rgba(136, 168, 135, 1);
+      }
+    }
+  }
+  .privacy {
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    .icon {
+      width: 40px;
+      height: 40px;
+    }
+    .privacyText {
+      margin-left: 2px;
+      font-size: 24px;
+      color: #a6a6a6;
+      .text {
+        z-index: 99;
+        color: #81a380;
+      }
+    }
+  }
+  .registerPrivacy {
+    margin: 20px 0;
+  }
+}
+
+//iPhone 6\7\8 及以下适配
+@media screen and (max-height: 680px) {
+  .logoBox {
+    height: calc(430 * 2px) !important;
+  }
+  .privacy {
+    margin-top: 100px !important;
+  }
+}
+
+//iPhone 6\7\8 puls及以下适配
+@media screen and (max-height: 740px) {
+  .logo,
+  .loginButton,
+  .privacy {
+    margin-top: 100px !important;
+  }
+}

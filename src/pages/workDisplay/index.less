@@ -1,0 +1,78 @@
+.index {
+  padding: 26px 56px;
+  .title {
+    font-weight: 600;
+    font-size: 36px;
+    margin-bottom: 22px;
+  }
+  .fileBox {
+    margin: 80px 24px 24px 24px;
+    height: 120px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    .fileIcon {
+      margin-left: 42px;
+      width: calc(18.1px * 2);
+      height: calc(23px * 2);
+    }
+    .content {
+      width: 350px;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      margin-left: 32px;
+      letter-spacing: 2px;
+      color: rgba(166, 166, 166, 1);
+    }
+    .choiceIcon {
+      position: absolute;
+      right: 120px;
+      padding: 10px 20px;
+      font-size: 28px;
+      color: #a6a6a6;
+      background-color: #dbdbdb;
+      border-radius: 10px;
+    }
+  }
+  .experienceText {
+    width: auto;
+    // background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 60px;
+  }
+  .save {
+    margin-top: 180px;
+    width: 470px;
+    height: 80px;
+    color: white;
+    line-height: 80px;
+    background: rgba(129, 163, 128, 1);
+    border-radius: 40px;
+  }
+  .update {
+    margin-top: 40px;
+  }
+  .uploadBox {
+    width: 444px;
+    height: 356px;
+    border: 2px #d6e4ef solid;
+    text-align: center;
+    background-color: #f1f1f1;
+    color: rgba(112, 112, 112, 1);
+    font-size: 28px;
+    .uploadImg {
+      margin: 54px 0 22px 0;
+      width: 112px;
+      height: 112px;
+    }
+  }
+}
+
+//iPhone 6\7\8 及以下适配
+@media screen and (max-height: 680px) {
+  .save {
+    margin-top: 80px !important;
+  }
+}

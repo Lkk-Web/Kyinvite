@@ -1,0 +1,100 @@
+.indexBox {
+  .bannerBg {
+    background-color: #bed2bb;
+    height: calc(165 * 2px);
+    .banner {
+      margin: 0 20px;
+      background-color: #81a380;
+      .demo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .bead {
+    width: 100vw;
+    height: 32px;
+    border-radius: 2000rpx;
+    background: #ffffff;
+    transform: translateY(-16px);
+  }
+  .contentBg {
+    margin: 0 32px 32px 32px;
+    .indexButton {
+      height: calc(90 * 2px);
+      display: flex;
+      justify-content: space-around;
+      .buttonBox {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .buttonSearch {
+          height: calc(56 * 2px);
+          width: calc(56 * 2px);
+          margin-bottom: 4px;
+        }
+      }
+    }
+    .line {
+      border-top: 0.1px #dfd4d4 solid;
+      margin-bottom: calc(13 * 2px);
+    }
+    .searchBox {
+      position: relative;
+      .search {
+        height: calc(41 * 2px);
+        border-radius: calc(15 * 2px);
+        background: rgba(244, 244, 244, 1);
+        padding-left: calc(15 * 2px);
+      }
+      .searchIcon {
+        position: absolute;
+        right: calc(10 * 2px);
+        top: calc(7 * 2px);
+        width: calc(26 * 2px);
+        height: calc(26 * 2px);
+      }
+    }
+    .conditionTitle {
+      color: rgba(129, 163, 128, 1);
+      font-size: 36px;
+    }
+    .buttonBox {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 32px;
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(255, 255, 255, 1);
+        padding: 10px 20px;
+        margin: 20px 40px 0 0;
+        background: rgba(190, 210, 187, 1);
+        border-radius: 8px;
+        .right {
+          padding-top: 5px;
+          margin-left: 8px;
+        }
+      }
+    }
+    .searchButton {
+      margin: 73px auto 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 330px;
+      height: 66px;
+      color: #ffffff;
+      background: rgba(129, 163, 128, 1);
+      border-radius: 11px;
+    }
+    .title {
+      color: rgba(129, 163, 128, 1);
+      font-size: 36px;
+      padding: 16px 0;
+    }
+  }
+}

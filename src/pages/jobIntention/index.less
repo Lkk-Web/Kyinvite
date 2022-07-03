@@ -1,0 +1,68 @@
+.index {
+  padding: 0 50px;
+  .title {
+    margin: calc(60px * 2) 0 32px 0;
+    font-size: 36px;
+  }
+  .expectionJob,
+  .expectionCity {
+    width: calc(324px * 2);
+    height: calc(120px * 2);
+    margin-top: 80px;
+    background: rgba(242, 247, 243, 1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .box {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      .jobImage {
+        margin-left: 30px;
+        width: calc(65px * 2);
+        height: calc(65px * 2);
+      }
+      .mapImage {
+        margin-left: 30px;
+        width: calc(62.26px * 2);
+        height: calc(44.88px * 2);
+      }
+      .textBox {
+        margin-left: 30px;
+        width: 365px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        .titleText {
+          font-size: 36px;
+          margin-bottom: 10px;
+        }
+        .text {
+          display: inline;
+        }
+        .view{
+          font-size: 24px;
+        }
+      }
+    }
+    .icon {
+      position: absolute;
+      right: 30px;
+      width: 48px;
+      height: 48px;
+    }
+  }
+  .bind{
+    margin: 60px auto;
+    width: 400px;
+    height: 80px;
+    background: #81a380;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 8px 48px 8px 48px;
+  }
+}

@@ -1,0 +1,77 @@
+.index {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  .fileBox {
+    margin: 280px 24px 24px 24px;
+    height: 120px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    .fileIcon {
+      margin-left: 62px;
+      width: calc(18.1px * 2);
+      height: calc(23px * 2);
+    }
+    .content {
+      width: 350px;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      margin-left: 32px;
+      letter-spacing: 2px;
+      color: rgba(166, 166, 166, 1);
+    }
+    .choiceIcon {
+      position: absolute;
+      right: 80px;
+      padding: 10px 20px;
+      font-size: 28px;
+      color: #a6a6a6;
+      background-color: #dbdbdb;
+      border-radius: 10px;
+    }
+  }
+  .letter {
+    width: calc(181.25px * 2);
+    height: calc(187.58px * 2);
+    margin: 244px auto 87px auto;
+  }
+  .bookDisplay {
+    width: calc(154.24px * 2);
+    height: calc(160.76px * 2);
+    margin: 244px auto 87px auto;
+  }
+  .hint {
+    margin: 0 auto;
+    font-size: 36px;
+    color: #a6a6a6;
+  }
+  .fileHint {
+    font-size: 36px;
+    color: #a6a6a6;
+    margin: 280px auto 72px auto;
+  }
+  .wxBotton {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 512px;
+    height: 84px;
+    background: rgba(129, 163, 128, 1);
+    color: white;
+    border-radius: 20px;
+  }
+}
+
+//iPhone 6\7\8 及以下适配
+@media screen and (max-height: 680px) {
+  .letter {
+    margin: 160px auto 87px auto !important;
+  }
+  .fileHint {
+    margin: 160px auto 72px auto !important;
+  }
+}
