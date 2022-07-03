@@ -22,6 +22,20 @@
 
 就可以运行项目了,如需更换页面仅需将src/app.config.ts中的页面置顶即可。
 
+### 部分页面如下：
+
+![image-20220703085326865](https://kyingsoft.oss-cn-hangzhou.aliyuncs.com/setting/github/Kyinvite/1.png)
+
+![image-20220703085326865](https://kyingsoft.oss-cn-hangzhou.aliyuncs.com/setting/github/Kyinvite/2.png)
+
+
+
+![image-20220703085326865](https://kyingsoft.oss-cn-hangzhou.aliyuncs.com/setting/github/Kyinvite/3.png)
+
+
+
+![image-20220703085326865](https://kyingsoft.oss-cn-hangzhou.aliyuncs.com/setting/github/Kyinvite/4.png)
+
 ## 本项目使用了下面的组件，在此鸣谢
 
 - TaroUI组件库
